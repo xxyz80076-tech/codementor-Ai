@@ -1,0 +1,4 @@
+* { box-sizing: border-box; }
+body, button, input, textarea, select { margin: 0; font-family: "Space Grotesk", sans-serif; }
+::selection { background: #e8a33d55; }
+textarea:focus, input:focus, select:focus { outline: 1.5px solid #e8a33d; }

@@ -1,0 +1,81 @@
+const charcoal = "#2b2f38";
+
+const base = {
+  accent: charcoal,
+  accentSoft: "#4b5563",
+  accentDeep: charcoal,
+  accentGradient: charcoal,     // flat, not a gradient — kept as the same key so existing usages still work
+  logoGradient: charcoal,
+  ctaGradient: charcoal,
+  navyGradient: charcoal,
+};
+
+const light = {
+  ...base,
+  mode: "light",
+  pageBg: "#eceef1",
+  glassBg: "rgba(255,255,255,0.7)",
+  glassBgSolid: "#ffffff",
+  glassBorder: "1px solid #e4e6ea",
+  glassShadow: "0 4px 18px rgba(20,22,28,0.06)",
+  textDark: "#1a1d23",
+  textMuted: "#6b7280",
+  neuBg: "#eef0f3",
+  neuShadowOut: "6px 6px 14px rgba(180,184,192,0.35), -6px -6px 14px rgba(255,255,255,0.9)",
+  neuShadowIn: "inset 4px 4px 8px rgba(180,184,192,0.3), inset -4px -4px 8px rgba(255,255,255,0.9)",
+  codeBg: "#0d1117",
+  codeHeaderBg: "#151d29",
+  codeBorder: "#253142",
+  codeText: "#d5dde8",
+  danger: "#c0392b",
+  sidebarBg: "#f7f8fa",
+  sidebarText: "#1a1d23",
+  sidebarTextMuted: "#6b7280",
+  sidebarActiveBg: "#e7e9ec",
+  sidebarActiveBorder: `3px solid ${charcoal}`,
+  sidebarHoverBg: "rgba(0,0,0,0.03)",
+  bubbleUserBg: charcoal,
+  bubbleUserText: "#ffffff",
+  bubbleAssistantBg: "#eef0f3",
+  bubbleAssistantBorder: "1px solid #e4e6ea",
+  bubbleAssistantAccent: charcoal,
+  overlayBg: "rgba(20,20,24,0.4)",
+  toggleTrack: "#d7d9de",
+};
+
+const dark = {
+  ...base,
+  mode: "dark",
+  pageBg: "#15171c",
+  glassBg: "rgba(30,32,38,0.7)",
+  glassBgSolid: "#1e2026",
+  glassBorder: "1px solid rgba(255,255,255,0.08)",
+  glassShadow: "0 4px 18px rgba(0,0,0,0.4)",
+  textDark: "#f0f1f3",
+  textMuted: "#9096a1",
+  neuBg: "#25272e",
+  neuShadowOut: "6px 6px 14px rgba(0,0,0,0.4), -6px -6px 14px rgba(255,255,255,0.03)",
+  neuShadowIn: "inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(255,255,255,0.03)",
+  codeBg: "#0a0b10",
+  codeHeaderBg: "#14151e",
+  codeBorder: "#282a3a",
+  codeText: "#d5dde8",
+  danger: "#ff6b76",
+  sidebarBg: "#191b21",
+  sidebarText: "#f0f1f3",
+  sidebarTextMuted: "#7d8290",
+  sidebarActiveBg: "rgba(255,255,255,0.06)",
+  sidebarActiveBorder: "3px solid #c8cad0",
+  sidebarHoverBg: "rgba(255,255,255,0.03)",
+  bubbleUserBg: "#c8cad0",
+  bubbleUserText: "#15171c",
+  bubbleAssistantBg: "#25272e",
+  bubbleAssistantBorder: "1px solid rgba(255,255,255,0.06)",
+  bubbleAssistantAccent: "#c8cad0",
+  overlayBg: "rgba(0,0,0,0.6)",
+  toggleTrack: "#3a3d44",
+};
+
+export function getTheme(mode) {
+  return mode === "dark" ? dark : light;
+}
